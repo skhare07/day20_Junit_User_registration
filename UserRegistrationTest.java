@@ -8,11 +8,17 @@ public class UserRegistrationTest {
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.validateFirstName("Sourav");
-    }
+            }
 
     @Test
     public void givenLastName_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.validateLastName("Khare");
+    }
+
+    @Test
+    public void givenEmail_WhenProper_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        userRegistration.validateEmail("abc.xyz@bl.co.in");
     }
 }
