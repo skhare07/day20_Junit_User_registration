@@ -33,4 +33,11 @@ public class UserRegistrationTest {
         Assertions.assertTrue(phoneNumber);
     }
 
+    @Test
+    public void givenPassword_WhenProper_ShouldReturnTrue(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean email = userRegistration.validatePassword("qwertyui");
+        Assertions.assertTrue(email);
+    }
+
 }
