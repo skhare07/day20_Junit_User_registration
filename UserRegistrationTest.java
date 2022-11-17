@@ -6,6 +6,7 @@ public class UserRegistrationTest {
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
-        userRegistration.validateFirstName("Sourav");
+       boolean fName = userRegistration.validateFirstName("Sourav");
+        Assertions.assertTrue(fName);
     }
 }
