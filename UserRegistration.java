@@ -8,6 +8,7 @@ public class UserRegistration {
     private static final String EMAIL_PATTERN = "^[a-z]{1,10}[._+-]?[a-z]{1,10}?[\\@][a-z]{1,10}[\\.][a-z]{1,4}[\\.][a-z]{2}$";
     private static final String PHONE_PATTERN = "^[9]{1}[1]{1}[ ]?[6-9]{1}[0-9]{9}$";
 
+    private static final String PASSWORD_PATTERN = "^[a-z]{8,}$";
     public boolean validateFirstName(String fname) {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
         return pattern.matches(NAME_PATTERN, fname);
@@ -26,5 +27,10 @@ public class UserRegistration {
     public boolean validatePhoneNumber(String phNumber) {
         Pattern pattern = Pattern.compile(PHONE_PATTERN);
         return pattern.matches(PHONE_PATTERN, phNumber);
+    }
+
+    public boolean validatePassword(String password){
+        Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
+        return pattern.matches(PASSWORD_PATTERN, password);
     }
 }
